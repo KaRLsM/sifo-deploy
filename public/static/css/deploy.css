@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+/** sifo CSS
+/** ---------------
+/** version: 0.1
+
+/* @maingroup RESET */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { margin:0; padding:0; line-height:18px; }
+table { border-collapse:collapse; border-spacing:0; }
+p { margin: 0; }
+fieldset,img { border:0; }
+address,caption,cite,code,dfn,th,var { font-style:normal; font-weight:normal; }
+ol,ul { list-style:none; }
+caption,th { text-align:left; }
+h1,h2,h3,h4,h5,h6 { font-size:100%; font-weight:normal; }
+q:before,q:after { content:''; }
+abbr,acronym { border:0; }
+a:active { outline:none; }
+a:focus { -moz-outline-style:none; }
+/* @endmaingroup RESET */
+
+/* @maingroup IMPROVEMENTS */
+/* @group clearfix */
+.clearfix:after { visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0; }
+.clearfix { display: inline-block; }
+* html .clearfix { height:1%; }
+.clearfix { display: block; }
+/* @endgroup clearfix */
+
+.hidden { display:none; }
+/* @endmaingroup IMPROVEMENTS */
+
+/* @group GENERAL */
+body { background-color:#fff; margin:0; }
+
+h1 { font:bold 14px "Trebuchet Ms", Arial, sans-serif; color:#5c5c5c; text-shadow:1px 1px #bbb; padding-top:20px; height:40px; }
+	h1 strong { font-size:24px; color:#fff; }
+
+h2 { font:bold 17px "Trebuchet Ms", Arial, sans-serif; color:#5C5C5C; text-align:left; text-transform:uppercase; margin-bottom:10px; }
+h3 { font:bold 16px "Trebuchet Ms", Arial, sans-serif; color:#000; }
+	h3 strong { color:#7d2c85; }
+
+p { font:bold 16px "Trebuchet Ms", Arial, sans-serif; color:#000; }
+
+dd { font:12px Verdana, Helvetica, sans-serif; color:#4b473f; }
+hr { background-color:#dbd9c2; border:0; height:1px; clear:both; }
+
+a { color:#1095e1; text-decoration:underline; }
+	a:hover { color:#000; }
+
+p.small { font:11px Verdana, Arial, sans-serif; color:#bbb; text-align:right; margin-top:150px; }
+object { line-height:0; }
+
+input.ok_btn { display:block; padding:6px 10px; border:1px solid #159a0e; background:#e7ffc1; color:#159a0e; font:bold 12px Verdana, Arial, sans-serif; text-decoration:none; -moz-box-shadow:1px 1px #bbb; -webkit-box-shadow:1px 1px #bbb; box-shadow:1px 1px #bbb; }
+	input.ok_btn:hover { background:#efffd5; border-color:#0d7a07; }
+
+::-webkit-validation-bubble-message { border-radius:2px; font:12px "Trebuchet Ms", Arial, sans-serif; }
+/* @endgroup GENERAL */
+
+/* @group WEB */
+#container { background:#fff url(../images/bg.png) repeat-x left top; }
+#content { width:900px; margin:0 auto; background:url(../images/bg.png) no-repeat left top; }
+
+header { overflow:hidden; margin-bottom:20px;}
+	header h1 { height:45px; padding:15px 0 0 10px; }
+	header nav { overflow:hidden; width:100%; background-color:#eee; font:16px "Trebuchet Ms", Arial, sans-serif; text-shadow:1px 1px #bbb; border-radius:0 0 4px 4px; border-bottom:1px solid #ddd; }
+		header nav li { float:left; border-right:1px solid #ccc; }
+			header nav li a { display:block; color:#5C5C5C; height:20px; padding:10px; text-decoration:none; }
+			header nav li a:hover { background-color:#ddd; color:#000; }
+
+.util_box { clear:both; margin-top:10px; margin-bottom:20px; }
+.repo_box { margin-bottom:15px; }
+	.repo_title { display:inline-block; width:400px; background-color:#bbb; -moz-border-radius:4px 4px 0 0; -webkit-border-radius:4px 4px 0 0; border-radius:4px 4px 0 0;
+					background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.81, rgb(187,187,187)), color-stop(0.92, rgb(184,182,184)));
+					background-image: -moz-linear-gradient(center bottom, rgb(187,187,187) 81%, rgb(184,182,184) 92%);
+				}
+		.repo_title h3 { display:inline-block; padding:4px 15px; font-size:18px; font-weight:normal; color:#fff; text-shadow:1px 1px #aaa; }
+		.repo_title p { display:inline-block; float:right; padding:4px 10px; background-color:#eee; border:1px solid #ddd; border-left-color:#aaa; color:#5c5c5c;
+						-moz-border-radius:0 4px 0 0; -webkit-border-radius:0 4px 0 0; border-radius:0 4px 0 0;
+						background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.81, rgb(238,238,238)), color-stop(0.92, rgb(245,245,245)));
+						background-image: -moz-linear-gradient(center bottom, rgb(238,238,238) 81%, rgb(245,245,245) 92%);
+					 }
+			.repo_title p abbr { color:#000; cursor:help; }
+	.repo_head { padding:8px 0 8px 15px; -moz-border-radius:0 4px 0 0; -webkit-border-radius:0 4px 0 0; border-radius:0 4px 0 0 ;
+				background-image: -webkit-gradient( linear, left bottom, left top, color-stop(0.17, rgb(189,189,189)), color-stop(0.59, rgb(199,199,199)), color-stop(0.94, rgb(212,212,212)));
+				background-image: -moz-linear-gradient( center bottom, rgb(189,189,189) 17%, rgb(199,199,199) 59%, rgb(212,212,212) 94%);
+				}
+		.repo_head p { color:#5c5c5c; text-shadow:1px 1px #bbb; }
+			.repo_head p strong { color:#000; }
+		.repo_head .repo_head_left { float:left; padding-top:5px; }
+			.repo_head .repo_head_left p { margin-bottom:6px; }
+		.repo_head .repo_head_right { float:right; padding-right:10px; }
+			.repo_head .repo_head_right input { float:right; margin-bottom:6px; }
+			.repo_head .repo_head_right input.update_rev { padding:6px 12px 6px 13px; margin-bottom:0; }
+			.repo_head .repo_head_right input.input_text { height:24px; margin-right:5px; margin-bottom:0; color:#5c5c5c; font:bold 12px Verdana, Arial, sans-serif; box-shadow:1px 1px #aaa; }
+
+	.repo_content { background:#f8f8f8; padding:20px; border:1px solid #eee; -moz-border-radius:0 0 4px 4px; -webkit-border-radius:0 0 4px 4px; border-radius:0 0 4px 4px; }
+	.repo_content .log_box { background:#fff; border:1px solid #e8e8e8; padding:20px; }
+/* @endgroup WEB */
